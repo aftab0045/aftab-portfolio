@@ -45,14 +45,14 @@ const Contact = () => {
     {
       icon: <Mail className="text-primary" />,
       title: "Email",
-      value: "aftab.attar@example.com",
-      link: "mailto:aftab.attar@example.com",
+      value: "aftabattar0045@gmail.com",
+      link: "mailto:aftabattar0045@gmail.com",
     },
     {
       icon: <Phone className="text-primary" />,
       title: "Phone",
-      value: "+1 234 567 890",
-      link: "tel:+1234567890",
+      value: "+91 9175569884",
+      link: "tel:+91 9175569884",
     },
     {
       icon: <MapPin className="text-primary" />,
@@ -65,17 +65,17 @@ const Contact = () => {
   const socialLinks = [
     {
       icon: <Linkedin />,
-      link: "https://linkedin.com/in/",
+      link: "https://www.linkedin.com/in/aftab-attar-344094268/",
       label: "LinkedIn",
     },
     {
       icon: <Github />,
-      link: "https://github.com/",
+      link: "https://github.com/aftab0045",
       label: "GitHub",
     },
     {
       icon: <Twitter />,
-      link: "https://twitter.com/",
+      link: "https://x.com/aftab_attar_",
       label: "Twitter",
     },
   ];

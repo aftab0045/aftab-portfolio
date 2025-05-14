@@ -13,13 +13,13 @@ const Footer = () => {
               Aftab Attar
             </a>
             <p className="text-sm text-muted-foreground mt-2">
-              Front-end Developer | React JS Developer
+              Web Developer | Software Developer | Java Developer
             </p>
           </div>
           
           <div className="flex space-x-6">
             <a
-              href="https://linkedin.com/in/"
+              href="https://www.linkedin.com/in/aftab-attar-344094268/"
               target="_blank"
               rel="noopener noreferrer"
               className="social-icon"
@@ -28,7 +28,7 @@ const Footer = () => {
               <Linkedin size={20} />
             </a>
             <a
-              href="https://github.com/"
+              href="https://github.com/aftab0045"
               target="_blank"
               rel="noopener noreferrer"
               className="social-icon"
@@ -37,7 +37,7 @@ const Footer = () => {
               <Github size={20} />
             </a>
             <a
-              href="https://twitter.com/"
+              href="https://x.com/aftab_attar_"
               target="_blank"
               rel="noopener noreferrer"
               className="social-icon"

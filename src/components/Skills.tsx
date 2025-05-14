@@ -24,7 +24,7 @@ const Skills = () => {
     { name: "React JS", level: 90 },
     { name: "JavaScript", level: 85 },
     { name: "Java", level: 80 },
-    { name: "Node.js", level: 78 },
+    { name: "Node.js", level: 75 },
     { name: "TypeScript", level: 75 },
     { name: "Tailwind CSS", level: 85 },
     { name: "HTML", level: 95 },
@@ -33,11 +33,11 @@ const Skills = () => {
   ];
 
   const otherSkills = [
-    { name: "Data Structures & Algorithms", level: 85 },
-    { name: "Object-Oriented Programming", level: 80 },
+    { name: "Data Structures & Algorithms", level: 90 },
+    { name: "Object-Oriented Programming", level: 95 },
     { name: "Problem Solving", level: 90 },
     { name: "UI/UX Design", level: 75 },
-    { name: "MERN Stack", level: 82 },
+    { name: "MERN Stack", level: 80 },
   ];
 
   const containerVariants = {
@@ -175,7 +175,7 @@ const Skills = () => {
           initial="hidden"
           animate={isVisible ? "visible" : "hidden"}
         >
-          {["React", "JavaScript", "Node.js", "TypeScript", "Java", "HTML", "CSS", "Tailwind", "MongoDB", "Express"].map((tech, index) => (
+          {["Java","React", "JavaScript","SQL", "Node.js", "TypeScript", "HTML", "CSS", "Tailwind", "MongoDB", "Express"].map((tech, index) => (
             <motion.div
               key={tech}
               className="flex flex-col items-center justify-center bg-card p-4 rounded-lg shadow-sm w-full aspect-square hover-effect"
@@ -183,18 +183,21 @@ const Skills = () => {
               whileHover="hover"
               custom={index}
             >
-              <div className="text-4xl mb-2">
-                {tech === "React" && "⚛️"}
-                {tech === "JavaScript" && "𝙅𝙎"}
-                {tech === "Node.js" && "🟢"}
-                {tech === "TypeScript" && "𝙏𝙎"}
-                {tech === "Java" && "☕"}
-                {tech === "HTML" && "🌐"}
-                {tech === "CSS" && "🎨"}
-                {tech === "Tailwind" && "🌊"}
-                {tech === "MongoDB" && "🍃"}
-                {tech === "Express" && "🚂"}
-              </div>
+              <div className="text-4xl mb-2"> 
+  {tech === "Java" && "☕"}           
+  {tech === "React" && "⚛️"}
+  {tech === "JavaScript" && "𝙅𝙎"}
+  {tech === "SQL" && "🗃️"}
+  {tech === "Node.js" && "🟢"}
+  {tech === "TypeScript" && "𝙏𝙎"}
+  {tech === "HTML" && "🌐"}
+  {tech === "CSS" && "🎨"}
+  {tech === "Tailwind" && "🌊"}
+  {tech === "MongoDB" && "🍃"}
+  {tech === "Express" && "🚂"}
+           
+</div>
+
               <span className="text-sm font-medium">{tech}</span>
             </motion.div>
           ))}

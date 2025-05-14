@@ -8,8 +8,8 @@ const Education = () => {
       id: 1,
       degree: "B.E. in Computer Engineering",
       institution: "AISSMS IOIT, Pune",
-      duration: "2019 - 2023",
-      grade: "8.45 CGPA",
+      duration: "2021 - 2025",
+      grade: "8.95 CGPA",
       details: [
         "Focused on core computer science concepts and software development",
         "Completed projects in web development and data structures",
@@ -19,16 +19,16 @@ const Education = () => {
     {
       id: 2,
       degree: "Higher Secondary Certificate (HSC)",
-      institution: "Junior College",
-      duration: "2017 - 2019",
+      institution: "Shri Chaitanya College , Hyderabad.",
+      duration: "2019 - 2020",
       grade: "92.90%",
       details: []
     },
     {
       id: 3,
       degree: "Secondary School Certificate (SSC)",
-      institution: "High School",
-      duration: "2016 - 2017",
+      institution: "Bharat Vidyalaya , Omerga.",
+      duration: "2017 - 2018",
       grade: "87.20%",
       details: []
     },
@@ -38,7 +38,7 @@ const Education = () => {
     {
       id: 1,
       title: "Subject Topper in Machine Learning",
-      provider: "University",
+      provider: "AISSMS IOIT",
       date: "2025",
       score: "92 marks"
     },
@@ -52,7 +52,7 @@ const Education = () => {
       id: 3,
       title: "Data Structures & Algorithms",
       provider: "AlgoPrep",
-      date: "2022",
+      date: "2023",
     },
     {
       id: 4,

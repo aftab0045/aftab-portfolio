@@ -22,11 +22,11 @@ const Experience = () => {
                 <CardHeader>
                   <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4">
                     <div>
-                      <CardTitle>React JS Developer Intern</CardTitle>
+                      <CardTitle>Web Developer Intern</CardTitle>
                       <CardDescription>NoQs Digital Pvt. Ltd.</CardDescription>
                     </div>
                     <div className="text-sm bg-muted text-muted-foreground px-3 py-1 rounded-full w-fit">
-                      Jan 2023 - Jun 2023
+                      JAN 2024 - FEB 2024
                     </div>
                   </div>
                 </CardHeader>
