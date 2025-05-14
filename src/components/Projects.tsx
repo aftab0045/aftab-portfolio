@@ -2,6 +2,9 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { ExternalLink, Github } from "lucide-react";
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
 
 const Projects = () => {
   const projects = [
@@ -43,69 +46,137 @@ const Projects = () => {
     }
   ];
 
+  const containerRef = useRef(null);
+  const isInView = useInView(containerRef, { once: false, amount: 0.2 });
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" }
+    }
+  };
+
+  const buttonVariants = {
+    hover: { 
+      scale: 1.05,
+      transition: { duration: 0.2 }
+    }
+  };
+
   return (
     <section id="projects" className="section-padding">
       <div className="container mx-auto px-4">
-        <h2 className="section-title">Projects</h2>
+        <motion.h2 
+          className="section-title"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          Projects
+        </motion.h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
-            <Card 
-              key={project.id} 
-              className="card-hover overflow-hidden border border-border bg-card"
-              style={{ animationDelay: `${index * 0.2}s` }}
+        <motion.div 
+          ref={containerRef}
+          className="grid grid-cols-1 md:grid-cols-2 gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+        >
+          {projects.map((project) => (
+            <motion.div
+              key={project.id}
+              variants={cardVariants}
+              whileHover={{ y: -10, transition: { duration: 0.2 } }}
             >
-              <div className="overflow-hidden h-48">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                />
-              </div>
-              
-              <CardHeader>
-                <CardTitle>{project.title}</CardTitle>
-                <CardDescription>{project.description}</CardDescription>
-              </CardHeader>
-              
-              <CardContent>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.technologies.map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+              <Card className="card-hover overflow-hidden border border-border bg-card h-full">
+                <div className="overflow-hidden h-48 group">
+                  <motion.img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover"
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ duration: 0.5 }}
+                  />
+                  <motion.div 
+                    className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 flex items-center justify-center"
+                    initial={{ opacity: 0 }}
+                    whileHover={{ opacity: 1 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <ExternalLink size={32} className="text-white" />
+                  </motion.div>
                 </div>
-              </CardContent>
-              
-              <CardFooter className="flex justify-between">
-                <Button variant="outline" size="sm" className="gap-2" asChild>
-                  <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
-                    <Github size={16} />
-                    Code
-                  </a>
-                </Button>
-                <Button variant="default" size="sm" className="gap-2" asChild>
-                  <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
-                    <ExternalLink size={16} />
-                    Live Demo
-                  </a>
-                </Button>
-              </CardFooter>
-            </Card>
+                
+                <CardHeader>
+                  <CardTitle>{project.title}</CardTitle>
+                  <CardDescription>{project.description}</CardDescription>
+                </CardHeader>
+                
+                <CardContent>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.technologies.map((tech) => (
+                      <motion.span
+                        key={tech}
+                        className="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs"
+                        whileHover={{ scale: 1.1, backgroundColor: 'hsla(var(--primary)/0.2)' }}
+                      >
+                        {tech}
+                      </motion.span>
+                    ))}
+                  </div>
+                </CardContent>
+                
+                <CardFooter className="flex justify-between">
+                  <motion.div variants={buttonVariants} whileHover="hover">
+                    <Button variant="outline" size="sm" className="gap-2" asChild>
+                      <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
+                        <Github size={16} />
+                        Code
+                      </a>
+                    </Button>
+                  </motion.div>
+                  <motion.div variants={buttonVariants} whileHover="hover">
+                    <Button variant="default" size="sm" className="gap-2" asChild>
+                      <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink size={16} />
+                        Live Demo
+                      </a>
+                    </Button>
+                  </motion.div>
+                </CardFooter>
+              </Card>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
         
-        <div className="mt-12 text-center">
-          <Button className="btn-primary" asChild>
-            <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
-              View More Projects
-            </a>
-          </Button>
-        </div>
+        <motion.div 
+          className="mt-12 text-center"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.6, duration: 0.5 }}
+        >
+          <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.2 }}>
+            <Button className="btn-primary" asChild>
+              <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+                View More Projects
+              </a>
+            </Button>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );
