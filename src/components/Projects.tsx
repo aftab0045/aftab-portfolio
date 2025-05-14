@@ -14,8 +14,8 @@ const Projects = () => {
       description: "A platform for hosting coding competitions with real-time evaluation and leaderboards.",
       image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80",
       technologies: ["React", "Node.js", "MongoDB", "Socket.io"],
-      liveLink: "#",
-      githubLink: "#",
+      liveLink: "https://github.com/aftabattar",
+      githubLink: "https://github.com/aftabattar",
     },
     {
       id: 2,
@@ -23,8 +23,8 @@ const Projects = () => {
       description: "An application that compares cab prices across different providers to help users find the best deal.",
       image: "https://images.unsplash.com/photo-1561655573-e5179af19ea8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80",
       technologies: ["React", "Firebase", "Tailwind CSS", "Google Maps API"],
-      liveLink: "#",
-      githubLink: "#",
+      liveLink: "https://github.com/aftabattar",
+      githubLink: "https://github.com/aftabattar",
     },
     {
       id: 3,
@@ -32,17 +32,17 @@ const Projects = () => {
       description: "A web application that visualizes various sorting algorithms to help users understand how they work.",
       image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1934&q=80",
       technologies: ["JavaScript", "HTML", "CSS"],
-      liveLink: "#",
-      githubLink: "#",
+      liveLink: "https://github.com/aftabattar",
+      githubLink: "https://github.com/aftabattar",
     },
     {
       id: 4,
-      title: "Interior Designer Website",
-      description: "A portfolio website for an interior designer showcasing their projects and services.",
-      image: "https://images.unsplash.com/photo-1582037928769-fafd2b6c7edf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-      technologies: ["React", "Tailwind CSS", "Framer Motion"],
-      liveLink: "#",
-      githubLink: "#",
+      title: "AI Chat Bot",
+      description: "An intelligent chatbot application built with modern AI technologies to provide responsive and helpful interactions.",
+      image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80",
+      technologies: ["React", "OpenAI API", "Node.js", "Express"],
+      liveLink: "https://github.com/aftabattar",
+      githubLink: "https://github.com/aftabattar",
     }
   ];
 
@@ -171,7 +171,7 @@ const Projects = () => {
         >
           <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.2 }}>
             <Button className="btn-primary" asChild>
-              <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/aftabattar" target="_blank" rel="noopener noreferrer">
                 View More Projects
               </a>
             </Button>

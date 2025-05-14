@@ -14,16 +14,10 @@ const About = () => {
               <div className="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-primary to-accent p-1">
                 <div className="w-full h-full rounded-xl overflow-hidden">
                   <img
-                    src="https://images.unsplash.com/photo-1580518380430-2f84c0a7fb85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                    src="/lovable-uploads/fc50e885-f014-42c0-bb1b-df24e9c75813.png"
                     alt="Aftab Attar"
                     className="w-full h-full object-cover"
                   />
-                </div>
-              </div>
-              <div className="absolute -bottom-4 -right-4 bg-card p-4 rounded-lg shadow-lg">
-                <div className="flex items-center gap-2">
-                  <span className="text-xl font-bold">2+</span>
-                  <span className="text-sm text-muted-foreground">Years of Experience</span>
                 </div>
               </div>
             </div>

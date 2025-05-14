@@ -1,4 +1,3 @@
-
 import { useEffect, useState, useRef } from "react";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 
@@ -25,6 +24,8 @@ const Skills = () => {
     { name: "React JS", level: 90 },
     { name: "JavaScript", level: 85 },
     { name: "Java", level: 80 },
+    { name: "Node.js", level: 78 },
+    { name: "TypeScript", level: 75 },
     { name: "Tailwind CSS", level: 85 },
     { name: "HTML", level: 95 },
     { name: "CSS", level: 90 },
@@ -36,6 +37,7 @@ const Skills = () => {
     { name: "Object-Oriented Programming", level: 80 },
     { name: "Problem Solving", level: 90 },
     { name: "UI/UX Design", level: 75 },
+    { name: "MERN Stack", level: 82 },
   ];
 
   const containerVariants = {
@@ -168,12 +170,12 @@ const Skills = () => {
         </div>
         
         <motion.div 
-          className="mt-16 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8 justify-items-center"
+          className="mt-16 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 justify-items-center"
           variants={containerVariants}
           initial="hidden"
           animate={isVisible ? "visible" : "hidden"}
         >
-          {["React", "JavaScript", "Java", "HTML", "CSS", "Tailwind"].map((tech, index) => (
+          {["React", "JavaScript", "Node.js", "TypeScript", "Java", "HTML", "CSS", "Tailwind", "MongoDB", "Express"].map((tech, index) => (
             <motion.div
               key={tech}
               className="flex flex-col items-center justify-center bg-card p-4 rounded-lg shadow-sm w-full aspect-square hover-effect"
@@ -184,10 +186,14 @@ const Skills = () => {
               <div className="text-4xl mb-2">
                 {tech === "React" && "⚛️"}
                 {tech === "JavaScript" && "𝙅𝙎"}
+                {tech === "Node.js" && "🟢"}
+                {tech === "TypeScript" && "𝙏𝙎"}
                 {tech === "Java" && "☕"}
                 {tech === "HTML" && "🌐"}
                 {tech === "CSS" && "🎨"}
                 {tech === "Tailwind" && "🌊"}
+                {tech === "MongoDB" && "🍃"}
+                {tech === "Express" && "🚂"}
               </div>
               <span className="text-sm font-medium">{tech}</span>
             </motion.div>

@@ -37,18 +37,25 @@ const Education = () => {
   const certifications = [
     {
       id: 1,
+      title: "Subject Topper in Machine Learning",
+      provider: "University",
+      date: "2025",
+      score: "92 marks"
+    },
+    {
+      id: 2,
       title: "Java Programming Masterclass",
       provider: "Udemy",
       date: "2022",
     },
     {
-      id: 2,
+      id: 3,
       title: "Data Structures & Algorithms",
       provider: "AlgoPrep",
       date: "2022",
     },
     {
-      id: 3,
+      id: 4,
       title: "React - The Complete Guide",
       provider: "NamasteDev",
       date: "2023",
@@ -124,8 +131,15 @@ const Education = () => {
                         <CardTitle>{cert.title}</CardTitle>
                         <CardDescription>{cert.provider}</CardDescription>
                       </div>
-                      <div className="text-sm bg-muted text-muted-foreground px-3 py-1 rounded-full">
-                        {cert.date}
+                      <div className="flex flex-wrap gap-2">
+                        <span className="text-sm bg-muted text-muted-foreground px-3 py-1 rounded-full">
+                          {cert.date}
+                        </span>
+                        {cert.score && (
+                          <span className="text-sm bg-primary/10 text-primary px-3 py-1 rounded-full">
+                            {cert.score}
+                          </span>
+                        )}
                       </div>
                     </div>
                   </CardHeader>
