@@ -1,5 +1,5 @@
 
-import { Briefcase, GraduationCap, Heart } from "lucide-react";
+import { Briefcase, GraduationCap, Heart, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const About = () => {
@@ -58,7 +58,16 @@ const About = () => {
                 <a href="#contact">Contact Me</a>
               </Button>
               <Button variant="outline" className="btn-secondary hover-effect" asChild>
-                <a href="/resume.pdf" download>Download CV</a>
+                <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                  <FileText className="mr-2" size={16} />
+                  View Resume
+                </a>
+              </Button>
+              <Button variant="secondary" className="hover-effect" asChild>
+                <a href="/resume.pdf" download>
+                  <FileText className="mr-2" size={16} />
+                  Download CV
+                </a>
               </Button>
             </div>
           </div>
