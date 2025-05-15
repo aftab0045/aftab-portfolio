@@ -10,7 +10,7 @@ const About = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="animate-slide-right">
-            <div className="relative">
+            <div className="relative max-w-sm mx-auto md:mx-0">
               <div className="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-primary to-accent p-1">
                 <div className="w-full h-full rounded-xl overflow-hidden">
                   <img
@@ -34,19 +34,19 @@ const About = () => {
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 my-6">
-              <div className="flex flex-col items-center p-4 bg-card rounded-lg shadow-sm">
+              <div className="flex flex-col items-center p-4 bg-card rounded-lg shadow-sm hover-effect">
                 <GraduationCap className="text-primary mb-2" size={24} />
                 <h4 className="font-medium">Education</h4>
                 <p className="text-sm text-center text-muted-foreground">Computer Engineering</p>
               </div>
               
-              <div className="flex flex-col items-center p-4 bg-card rounded-lg shadow-sm">
+              <div className="flex flex-col items-center p-4 bg-card rounded-lg shadow-sm hover-effect">
                 <Briefcase className="text-primary mb-2" size={24} />
                 <h4 className="font-medium">Experience</h4>
                 <p className="text-sm text-center text-muted-foreground">Frontend Development</p>
               </div>
               
-              <div className="flex flex-col items-center p-4 bg-card rounded-lg shadow-sm">
+              <div className="flex flex-col items-center p-4 bg-card rounded-lg shadow-sm hover-effect">
                 <Heart className="text-primary mb-2" size={24} />
                 <h4 className="font-medium">Interests</h4>
                 <p className="text-sm text-center text-muted-foreground">Cube Solving, Chess, Travelling</p>
@@ -54,10 +54,10 @@ const About = () => {
             </div>
             
             <div className="flex flex-wrap gap-4">
-              <Button className="btn-primary" asChild>
+              <Button className="btn-primary hover-effect" asChild>
                 <a href="#contact">Contact Me</a>
               </Button>
-              <Button variant="outline" className="btn-secondary" asChild>
+              <Button variant="outline" className="btn-secondary hover-effect" asChild>
                 <a href="/resume.pdf" download>Download CV</a>
               </Button>
             </div>

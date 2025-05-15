@@ -73,7 +73,9 @@ const CursorEffect = () => {
       y: position.y - 16,
       transition: {
         type: "spring",
-        mass: 0.3
+        mass: 0.3,
+        damping: 28,
+        stiffness: 400
       }
     },
     clicked: {
@@ -82,6 +84,11 @@ const CursorEffect = () => {
       backgroundColor: "rgba(255, 255, 255, 0.4)",
       x: position.x - 18,
       y: position.y - 18,
+      transition: {
+        type: "spring",
+        mass: 0.5,
+        damping: 28
+      }
     },
     hovered: {
       height: 64,
@@ -89,6 +96,11 @@ const CursorEffect = () => {
       backgroundColor: "rgba(255, 255, 255, 0.1)",
       x: position.x - 32,
       y: position.y - 32,
+      transition: {
+        type: "spring",
+        mass: 0.3,
+        damping: 20
+      }
     },
     hidden: {
       opacity: 0
@@ -97,6 +109,23 @@ const CursorEffect = () => {
 
   // Trail dots
   const dots = Array.from({ length: 8 });
+  
+  // Trail dot variants with improved transitions
+  const trailVariants = {
+    default: (index: number) => ({
+      x: position.x - 5,
+      y: position.y - 5,
+      opacity: 0.2 - index * 0.02,
+      scale: 1 - index * 0.05,
+      transition: {
+        type: "spring",
+        mass: 0.2,
+        damping: 20,
+        stiffness: 300,
+        delay: 0.02 * index
+      }
+    })
+  };
 
   return (
     <div className="cursor-effect-container">
@@ -114,19 +143,9 @@ const CursorEffect = () => {
         <motion.div
           key={index}
           className="cursor-trail fixed top-0 left-0 z-40 rounded-full bg-white pointer-events-none"
-          style={{
-            opacity: 0.2 - index * 0.02,
-            scale: 1 - index * 0.05,
-          }}
-          animate={{
-            x: position.x - 5,
-            y: position.y - 5,
-            transition: {
-              type: "spring",
-              mass: 0.3,
-              delay: 0.03 * index
-            }
-          }}
+          custom={index}
+          animate="default"
+          variants={trailVariants}
         />
       ))}
     </div>
