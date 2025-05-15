@@ -21,11 +21,7 @@ const Projects = () => {
       id: 2,
       title: "Cab Compare",
       description: "An application that compares cab prices across different providers to help users find the best deal.",
-<<<<<<< HEAD
       image: "https://curlytales.com/wp-content/uploads/2022/11/cab-compare.png",
-=======
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
->>>>>>> 9f415ccb1952708a0f92f69d77c3ce3008f8ec21
       technologies: ["React", "Firebase", "Tailwind CSS", "Google Maps API"],
       liveLink: "https://github.com/aftab0045/Cab-Compare-Platform",
       githubLink: "https://github.com/aftab0045/Cab-Compare-Platform",
