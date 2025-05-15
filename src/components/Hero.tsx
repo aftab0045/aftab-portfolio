@@ -190,7 +190,7 @@ const Hero = () => {
           animate="visible"
           variants={subtitleVariants}
         >
-          <span className="text-foreground">Frontend Developer | React JS Developer</span>
+          <span className="text-foreground">Full Stack Developer | Software Developer</span>
         </motion.h2>
         
         <motion.p 
@@ -230,7 +230,7 @@ const Hero = () => {
           animate="visible"
         >
           <motion.a
-            href="https://linkedin.com/in/"
+            href="https://www.linkedin.com/in/aftab-attar-344094268/"
             target="_blank"
             rel="noopener noreferrer"
             className="social-icon hover-effect"
@@ -241,7 +241,7 @@ const Hero = () => {
             <Linkedin size={24} />
           </motion.a>
           <motion.a
-            href="https://github.com/"
+            href="https://github.com/aftab0045"
             target="_blank"
             rel="noopener noreferrer"
             className="social-icon hover-effect"
@@ -252,7 +252,7 @@ const Hero = () => {
             <Github size={24} />
           </motion.a>
           <motion.a
-            href="https://twitter.com/"
+            href="https://x.com/aftab_attar_"
             target="_blank"
             rel="noopener noreferrer"
             className="social-icon hover-effect"

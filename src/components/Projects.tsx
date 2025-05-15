@@ -12,19 +12,19 @@ const Projects = () => {
       id: 1,
       title: "Real-Time Coding Competition Platform",
       description: "A platform for hosting coding competitions with real-time evaluation and leaderboards.",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80",
+      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
       technologies: ["React", "Node.js", "MongoDB", "Socket.io"],
-      liveLink: "https://github.com/aftabattar",
-      githubLink: "https://github.com/aftabattar",
+      liveLink: "https://github.com/aftab0045/Real-Time-Coding-Competition-",
+      githubLink: "https://github.com/aftab0045/Real-Time-Coding-Competition-",
     },
     {
       id: 2,
       title: "Cab Compare",
       description: "An application that compares cab prices across different providers to help users find the best deal.",
-      image: "https://images.unsplash.com/photo-1561655573-e5179af19ea8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80",
+      image: "https://curlytales.com/wp-content/uploads/2022/11/cab-compare.png",
       technologies: ["React", "Firebase", "Tailwind CSS", "Google Maps API"],
-      liveLink: "https://github.com/aftabattar",
-      githubLink: "https://github.com/aftabattar",
+      liveLink: "https://github.com/aftab0045/Cab-Compare-Platform",
+      githubLink: "https://github.com/aftab0045/Cab-Compare-Platform",
     },
     {
       id: 3,
@@ -32,17 +32,17 @@ const Projects = () => {
       description: "A web application that visualizes various sorting algorithms to help users understand how they work.",
       image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1934&q=80",
       technologies: ["JavaScript", "HTML", "CSS"],
-      liveLink: "https://github.com/aftabattar",
-      githubLink: "https://github.com/aftabattar",
+      liveLink: "https://github.com/aftab0045/Sorting-Visualizer",
+      githubLink: "https://github.com/aftab0045/Sorting-Visualizer",
     },
     {
       id: 4,
       title: "AI Chat Bot",
       description: "An intelligent chatbot application built with modern AI technologies to provide responsive and helpful interactions.",
-      image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80",
+      image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
       technologies: ["React", "OpenAI API", "Node.js", "Express"],
-      liveLink: "https://github.com/aftabattar",
-      githubLink: "https://github.com/aftabattar",
+      liveLink: "https://github.com/aftab0045/AI-Chat-Bot",
+      githubLink: "https://github.com/aftab0045/AI-Chat-Bot",
     }
   ];
 
@@ -100,6 +100,7 @@ const Projects = () => {
               key={project.id}
               variants={cardVariants}
               whileHover={{ y: -10, transition: { duration: 0.2 } }}
+              className="hover-effect"
             >
               <Card className="card-hover overflow-hidden border border-border bg-card h-full">
                 <div className="overflow-hidden h-48 group">
@@ -130,7 +131,7 @@ const Projects = () => {
                     {project.technologies.map((tech) => (
                       <motion.span
                         key={tech}
-                        className="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs"
+                        className="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs hover-effect"
                         whileHover={{ scale: 1.1, backgroundColor: 'hsla(var(--primary)/0.2)' }}
                       >
                         {tech}
@@ -140,7 +141,7 @@ const Projects = () => {
                 </CardContent>
                 
                 <CardFooter className="flex justify-between">
-                  <motion.div variants={buttonVariants} whileHover="hover">
+                  <motion.div variants={buttonVariants} whileHover="hover" className="hover-effect">
                     <Button variant="outline" size="sm" className="gap-2" asChild>
                       <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
                         <Github size={16} />
@@ -148,7 +149,7 @@ const Projects = () => {
                       </a>
                     </Button>
                   </motion.div>
-                  <motion.div variants={buttonVariants} whileHover="hover">
+                  <motion.div variants={buttonVariants} whileHover="hover" className="hover-effect">
                     <Button variant="default" size="sm" className="gap-2" asChild>
                       <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
                         <ExternalLink size={16} />
@@ -169,9 +170,9 @@ const Projects = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.6, duration: 0.5 }}
         >
-          <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.2 }}>
+          <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.2 }} className="hover-effect">
             <Button className="btn-primary" asChild>
-              <a href="https://github.com/aftabattar" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/aftab0045" target="_blank" rel="noopener noreferrer">
                 View More Projects
               </a>
             </Button>

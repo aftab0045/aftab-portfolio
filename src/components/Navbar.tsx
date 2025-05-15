@@ -65,7 +65,7 @@ const Navbar = () => {
               href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              download
+              className="hover-effect"
             >
               Resume
             </a>
@@ -101,12 +101,11 @@ const Navbar = () => {
                 </li>
               ))}
               <li>
-                <Button variant="outline" size="sm" className="w-full" asChild>
+                <Button variant="outline" size="sm" className="w-full hover-effect" asChild>
                   <a
                     href="/resume.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
-                    download
                   >
                     Resume
                   </a>
