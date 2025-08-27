@@ -10,7 +10,7 @@ This is my personal portfolio website built using **React.js** and **Tailwind CS
 - Projects, Skills, Education, and Contact sections
 
 ### 📄 Live Preview
-👉 [Visit my Portfolio](https://aftab-portfolio-web.netlify.app/)
+👉 [Visit my Portfolio](https://aftab-portfolio-theta.vercel.app/)
 
 ### 📁 Resume
 Click the **Resume** button on the website to download my resume.
